@@ -1,0 +1,92 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Resume Container */
+.resume-container {
+  width: 70%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+/* Font Sizes Increased */
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* Makes the image circular */
+  border: 5px solid #007BFF; /* Adds a border around the circle */
+  object-fit: cover; /* Ensures the image covers the circular area without distortion */
+}
+
+
+/* Sections */
+section {
+  margin-bottom: 20px;
+  padding: 25px;
+  background: linear-gradient(45deg, #007BFF, #00BFFF);
+  color: white;
+  border-radius: 8px;
+}
+
+/* Toggle Button */
+button {
+  padding: 10px 20px;
+  font-size: 1.25em;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Make the page scrollable if necessary */
+body {
+  height: auto;
+  overflow-y: scroll;
+}
+
