@@ -9,21 +9,23 @@
 <body>
     <div class="resume-container">
         <header>
-            <h1>Maham Irfan's Resume</h1>
-            <p>Graphic Designer and Web Developer</p>
-            
-            <div class="profile-pic-container">
-                <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
-              </div>
-              
+            <div class="header-content">
+                <h1>Maham Irfan's Resume</h1>
+                <p class="tagline">Creative Graphic Designer & Aspiring Web Developer</p>
+                <div class="profile-pic-container">
+                    <img src="assets/profilepicture2.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+            </div>
         </header>
-        
+
         <section class="personal-info">
             <h2>Personal Information</h2>
-            <p><strong>Name:</strong> Maham Irfan</p>
-            <p><strong>Email:</strong> h.m.irfan553@gmail.com</p>
-            <p><strong>Phone:</strong> 03002497553</p>
-            <p><strong>Address:</strong> Baldia Town Karachi</p>
+            <div class="info-grid">
+                <p><strong>Name:</strong> Maham Irfan</p>
+                <p><strong>Email:</strong> mahamirfan082008@gmail.com</p>
+                <p><strong>Phone:</strong> 03002497553</p>
+                <p><strong>Address:</strong> Baldia Town Karachi</p>
+            </div>
         </section>
 
         <section class="work-experience">
@@ -33,27 +35,33 @@
 
         <section class="education">
             <h2>Education</h2>
-            <p><strong>Current Studies:</strong> Class 11 at Pinnacle College</p>
-            <p><strong>Completed Education:</strong> Matriculation from Allied School</p>
+            <ul>
+                <li><strong>Current Studies:</strong> Class 11 at Pinnacle College</li>
+                <li><strong>Completed Education:</strong> Matriculation from Allied School</li>
+            </ul>
         </section>
 
         <section class="skills">
             <h2>Skills</h2>
-            <button id="toggle-skills">Toggle Skills</button>
+            <button id="toggle-skills" class="toggle-btn">Toggle Skills</button>
             <div id="skills-info" class="hidden">
                 <ul>
                     <li>Adobe Photoshop</li>
                     <li>Adobe After Effects</li>
                     <li>Adobe Illustrator</li>
-                    <li>Typescript</li>
+                    <li>TypeScript</li>
                     <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwind css</li>
+                    <li>Next.js</li>
+                    <li>Figma to code</li>
                 </ul>
             </div>
         </section>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
+
 
 

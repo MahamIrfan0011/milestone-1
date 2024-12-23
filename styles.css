@@ -1,92 +1,213 @@
-/* General Styling */
+/* General Styles */
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow-y: auto;
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  color: #ecf0f1;
+  animation: fadeInBody 1.5s ease-in-out;
+}
+
+/* Fade-in animation for the body */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Resume Container */
 .resume-container {
-  width: 70%;
-  background-color: #ffffff;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.85);
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s ease-in-out;
 }
 
-/* Font Sizes Increased */
-h1 {
-  font-size: 2.5em;
+/* Slide-in animation for the container */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-h2 {
-  font-size: 2em;
-}
-
-p {
-  font-size: 1.25em;
-}
-
-/* Header */
+/* Header Section */
 header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
+header h1 {
+  font-size: 2.5rem;
+  color: #1abc9c;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #bdc3c7;
+}
+
+/* Profile Picture with Pulse Animation */
 .profile-pic-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  margin: 15px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #1abc9c;
+  box-shadow: 0 0 15px 3px rgba(26, 188, 156, 0.5);
+  animation: pulse 2s infinite ease-in-out;
 }
 
 .profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%; /* Makes the image circular */
-  border: 5px solid #007BFF; /* Adds a border around the circle */
-  object-fit: cover; /* Ensures the image covers the circular area without distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 3px rgba(26, 188, 156, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 5px rgba(26, 188, 156, 0.7);
+  }
+}
 
-/* Sections */
+/* Section Titles */
+h2 {
+  color: #1abc9c;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #16a085;
+  padding-bottom: 5px;
+}
+
+/* Personal Info Section */
+.personal-info {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Larger Divs for Studies and Work Experience */
 section {
-  margin-bottom: 20px;
-  padding: 25px;
-  background: linear-gradient(45deg, #007BFF, #00BFFF);
-  color: white;
-  border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #34495e;
+  border-radius: 10px;
+  animation: fadeInSection 1s ease-in-out;
 }
 
-/* Toggle Button */
-button {
-  padding: 10px 20px;
-  font-size: 1.25em;
-  background-color: #007BFF;
-  color: white;
-  border: none;
+/* Fade-in animation for sections */
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section p {
+  margin: 5px 0;
+}
+
+/* Skills Section */
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills ul li {
+  background: #2c3e50;
+  color: #ecf0f1;
+  margin: 5px 0;
+  padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.skills ul li:hover {
+  background: #1abc9c;
+  color: #fff;
 }
 
 .hidden {
   display: none;
 }
 
-/* Make the page scrollable if necessary */
-body {
-  height: auto;
-  overflow-y: scroll;
+/* Button with Hover and Scale Animation */
+.toggle-btn {
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+.toggle-btn:hover {
+  background: #16a085;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-pic-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .toggle-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .profile-pic-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .toggle-btn {
+    font-size: 0.9rem;
+  }
+}
